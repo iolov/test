@@ -13,7 +13,7 @@ public class phisic : MonoBehaviour
     Vector3 dir;
     [SerializeField] float speed;
     int lineToMove = 1;
-    [SerializeField]float lineDistanse = 4;
+    [SerializeField]float lineDistanse;
     bool isGroung;
     [SerializeField] bool GODMODE;
     [SerializeField] Animator anim;
@@ -38,8 +38,9 @@ public class phisic : MonoBehaviour
     }
     private void Update()
     {
-        anim.speed = speed/2;
-        if(svipeController.swipeRight)
+        if (anim != null) anim.speed = speed / 2;
+
+        if (svipeController.swipeRight)
         {
             if (lineToMove < 2)
             {
