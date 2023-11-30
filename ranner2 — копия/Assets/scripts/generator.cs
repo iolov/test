@@ -14,12 +14,12 @@ public class generator : MonoBehaviour
 
     private void Start()
     {
-        SpawnPref(0);
-        SpawnPref(0);
-        SpawnPref(0);
+        SpawnPref(0,0);
+        SpawnPref(0,0);
+        SpawnPref(0,0);
         for (int i = 0; i < StaptPref; i++)
         {
-            SpawnPref(Random.Range(0,prefabs.Length));
+            SpawnPref(Random.Range(0,prefabs.Length),0);
         }
     }
 
@@ -27,13 +27,13 @@ public class generator : MonoBehaviour
     {
         if (player.position.z> spPos - (StaptPref * preLenf))
         {
-            SpawnPref(Random.Range(1, prefabs.Length));
+            SpawnPref(Random.Range(1, prefabs.Length),1);
             delPref();
         }
     }
-    void SpawnPref(int Ind)
+    void SpawnPref(int Ind,byte cum)
     {
-        DataHolder.ScenScore++;
+        DataHolder.ScenScore+=cum;
         GameObject nextPref = Instantiate(prefabs[Ind],transform.forward*spPos,Quaternion.identity);
         prefabsList.Add(nextPref);
         spPos += preLenf;
