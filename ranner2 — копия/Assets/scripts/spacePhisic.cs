@@ -15,14 +15,11 @@ public class spacePhisic : MonoBehaviour
     [SerializeField] bool GODMODE;
     [SerializeField] Animator anim;
     [SerializeField] float height;
-    float Mheight;
-    float Minheight;
+    [SerializeField] float defoltHeith;
     bool isGroung;
 
     void Start()
     {
-        Mheight = transform.position.y + height;
-        Minheight = transform.position.y;
         rb = GetComponent<Rigidbody>();
         Time.timeScale = 1;
     }
@@ -80,14 +77,14 @@ public class spacePhisic : MonoBehaviour
     }
     void muveUp()
     {
-        if (transform.position.y < Mheight)
+        if (transform.position.y < defoltHeith+height)
         {
             transform.position += new Vector3(0, height, 0);
         }
     }
     void muveDown()
     {
-        if (transform.position.y > Minheight)
+        if (transform.position.y > defoltHeith)
         {
             transform.position += new Vector3(0, -height, 0);
         }

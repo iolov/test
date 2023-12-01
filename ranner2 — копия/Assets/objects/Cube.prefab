@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1564803963409861122}
   - component: {fileID: 7188801986214331412}
   - component: {fileID: 2563183037916324878}
-  - component: {fileID: 8681731441674310272}
+  - component: {fileID: 103602226366514174}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8681731441674310272
+--- !u!65 &103602226366514174
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
