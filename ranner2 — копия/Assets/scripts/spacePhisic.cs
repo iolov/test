@@ -84,7 +84,7 @@ public class spacePhisic : MonoBehaviour
     }
     void muveDown()
     {
-        if (transform.position.y > defoltHeith)
+        if (transform.position.y > defoltHeith+0.1f)
         {
             transform.position += new Vector3(0, -height, 0);
         }

@@ -6,4 +6,5 @@ public class DataHolder : MonoBehaviour
 {
     public static int Score;
     public static int ScenScore;
+    public static bool startTimer = true;
 }
