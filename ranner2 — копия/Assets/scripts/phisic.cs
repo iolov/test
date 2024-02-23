@@ -17,6 +17,7 @@ public class phisic : MonoBehaviour
     bool isGroung;
     [SerializeField] bool GODMODE;
     [SerializeField] Animator anim;
+    [SerializeField] bool canJamp;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -70,7 +71,7 @@ public class phisic : MonoBehaviour
     }
     void jump()
     {
-        if (isGroung == true)
+        if (isGroung == true&canJamp == true)
         {
             rb.AddForce(new Vector3(0, 410, 0));
             isGroung = false;

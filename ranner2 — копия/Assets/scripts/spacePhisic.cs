@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class spacePhisic : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
-    Rigidbody rb;
+    Rigidbody rb; 
     Vector3 dir;
     [SerializeField] float speed;
     int lineToMove = 1;
